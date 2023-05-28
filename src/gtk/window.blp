@@ -1,0 +1,132 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.StatusPage install_status_page {
+  description: _("The application will be installed on the system.");
+
+  Box {
+    halign: center;
+    spacing: 10;
+
+    Button {
+      action-name: "app.quit";
+      label: _("Cancel");
+      halign: center;
+
+      styles [
+        "pill",
+      ]
+    }
+
+    Button {
+      action-name: "app.install";
+      label: _("Install");
+      halign: center;
+
+      styles [
+        "suggested-action",
+        "pill",
+      ]
+    }
+  }
+}
+
+Adw.StatusPage uninstall_status_page {
+  icon-name: "user-trash-symbolic";
+  description: _("The application will be removed from the system.");
+
+  Box {
+    halign: center;
+    spacing: 10;
+
+    Button {
+      action-name: "app.quit";
+      label: _("Cancel");
+      halign: center;
+
+      styles [
+        "pill",
+      ]
+    }
+
+    Button {
+      action-name: "app.uninstall";
+      label: _("Uninstall");
+      halign: center;
+
+      styles [
+        "destructive-action",
+        "pill",
+      ]
+    }
+  }
+}
+
+Adw.StatusPage done_status_page_install {
+  icon-name: "emblem-ok-symbolic";
+
+  Box {
+    halign: center;
+    spacing: 10;
+
+    Button {
+      action-name: "app.quit";
+      label: _("Done");
+
+      styles [
+        "pill",
+      ]
+    }
+
+    Button {
+      action-name: "app.open";
+      label: _("Open");
+
+      styles [
+        "pill",
+        "suggested-action",
+      ]
+    }
+  }
+}
+
+Adw.StatusPage done_status_page_uninstall {
+  icon-name: "emblem-ok-symbolic";
+
+  Button {
+    action-name: "app.quit";
+    label: _("Done");
+    halign: center;
+
+    styles [
+      "pill",
+    ]
+  }
+}
+
+Adw.StatusPage loading_status_page {
+  ProgressBar progress_bar {
+    halign: center;
+  }
+}
+
+template $SideloaderWindow : Adw.ApplicationWindow {
+  default-width: 600;
+  default-height: 500;
+  title: "Sideloader";
+  modal: true;
+
+  Box {
+    orientation: vertical;
+
+    Adw.HeaderBar {
+      styles [
+        "flat",
+      ]
+    }
+
+    Adw.Bin bin_main {
+      vexpand: true;
+    }
+  }
+}
