@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+
+  <object class="AdwStatusPage" id="status_install">
+    <property name="description" translatable="true">The application will be installed on the system.</property>
+    <child>
+      <object class="GtkBox">
+        <property name="halign">3</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkButton">
+            <property name="action-name">app.quit</property>
+            <property name="label" translatable="true">Cancel</property>
+            <property name="halign">3</property>
+            <style>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_install">
+            <property name="action-name">app.install</property>
+            <property name="label" translatable="true">Install</property>
+            <property name="halign">3</property>
+            <style>
+              <class name="suggested-action"/>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+
+  <object class="AdwStatusPage" id="status_uninstall">
+    <property name="icon-name">user-trash-symbolic</property>
+    <property name="description" translatable="true">The application will be removed from the system.</property>
+    <child>
+      <object class="GtkBox">
+        <property name="halign">3</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkButton">
+            <property name="action-name">app.quit</property>
+            <property name="label" translatable="true">Cancel</property>
+            <property name="halign">3</property>
+            <style>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_uninstall">
+            <property name="action-name">app.uninstall</property>
+            <property name="label" translatable="true">Uninstall</property>
+            <property name="halign">3</property>
+            <style>
+              <class name="destructive-action"/>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+
+  <object class="AdwStatusPage" id="status_install_done">
+    <property name="icon-name">emblem-ok-symbolic</property>
+    <child>
+      <object class="GtkBox">
+        <property name="halign">3</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkButton">
+            <property name="action-name">app.quit</property>
+            <property name="label" translatable="true">Done</property>
+            <style>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_open">
+            <property name="action-name">app.open</property>
+            <property name="label" translatable="true">Open</property>
+            <style>
+              <class name="pill"/>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+
+  <object class="AdwStatusPage" id="status_uninstall_done">
+    <property name="icon-name">emblem-ok-symbolic</property>
+    <child>
+      <object class="GtkButton">
+        <property name="action-name">app.quit</property>
+        <property name="label" translatable="true">Done</property>
+        <property name="halign">3</property>
+        <style>
+          <class name="pill"/>
+        </style>
+      </object>
+    </child>
+  </object>
+
+  <object class="AdwStatusPage" id="status_operation_failed">
+    <property name="icon-name">dialog-error-symbolic</property>
+    <child>
+      <object class="GtkButton">
+        <property name="action-name">app.quit</property>
+        <property name="label" translatable="true">Close</property>
+        <property name="halign">3</property>
+        <style>
+          <class name="pill"/>
+        </style>
+      </object>
+    </child>
+  </object>
+
+  <object class="AdwStatusPage" id="status_loading">
+    <child>
+      <object class="GtkProgressBar" id="progress_bar">
+        <property name="halign">3</property>
+      </object>
+    </child>
+  </object>
+
+  <template class="SideloaderWindow" parent="AdwApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">500</property>
+    <property name="title">Sideloader</property>
+    <property name="modal">true</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">1</property>
+        <child>
+          <object class="AdwHeaderBar">
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="AdwBin" id="bin_main">
+            <property name="vexpand">true</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

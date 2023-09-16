@@ -1,0 +1,6 @@
+data/org.vanillaos.Sideload.desktop.in
+data/org.vanillaos.Sideload.appdata.xml.in
+data/org.vanillaos.Sideload.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

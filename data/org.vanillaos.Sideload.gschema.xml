@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="vanilla-sideload">
+	<schema id="org.vanillaos.Sideload" path="/org/vanillaos/Sideload/">
+	</schema>
+</schemalist>

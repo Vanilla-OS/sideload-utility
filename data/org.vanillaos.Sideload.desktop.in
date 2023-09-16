@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=vanilla-sideload
+Exec=vanilla-sideload
+Icon=org.vanillaos.Sideload
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
