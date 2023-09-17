@@ -1,3 +1,9 @@
 /.vscode
 /mesonbuild
 /.flatpak-builder
+debian/.debhelper
+debian/vanilla-sideload-utility
+debian/vanilla-sideload-utility.substvars
+debian/debhelper-build-stamp
+debian/files
+test.sh
