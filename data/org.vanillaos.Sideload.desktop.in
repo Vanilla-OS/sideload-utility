@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=vanilla-sideload
+Name=Sideload
 Exec=vanilla-sideload
 Icon=org.vanillaos.Sideload
 Terminal=false
