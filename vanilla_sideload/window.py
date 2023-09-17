@@ -43,6 +43,8 @@ class SideloaderWindow(Adw.ApplicationWindow):
     btn_uninstall = Gtk.Template.Child()
     btn_open = Gtk.Template.Child()
 
+    label_install_size = Gtk.Template.Child()
+
     progress_bar = Gtk.Template.Child()
 
     __pkg: DebPackage
@@ -57,11 +59,6 @@ class SideloaderWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
         self.__requested_action = requested_action
         self.__resolver = DpkgResolver(pkg_path)
-        # print(pkg.name)
-        # print(pkg.description)
-        # print(pkg.version)
-        # print(pkg.dependencies)
-        # print(pkg.icon_path)
 
         self.__build_ui()
 
@@ -101,12 +98,19 @@ class SideloaderWindow(Adw.ApplicationWindow):
 
     def __build_install_ui(self):
         self.btn_install.connect("clicked", self.__on_install_clicked)
-        self.status_install.set_title(_("Install {}?").format(f'"{self.__pkg.name}"'))
+
+        self.status_install.set_title(self.__pkg.name)
+        self.status_install.set_description(self.__pkg.description)
+
+        self.label_install_size.set_text(self.__pkg.installed_size_format)
+
         self.bin_main.set_child(self.status_install)
 
     def __build_uninstall_ui(self):
         self.btn_uninstall.connect("clicked", self.__on_uninstall_clicked)
-        self.status_uninstall.set_title(_("Uninstall {}?").format(self.__pkg.name))
+
+        self.status_uninstall.set_title(self.__pkg.name)
+
         self.bin_main.set_child(self.status_uninstall)
 
     def __on_install_clicked(self, button: Gtk.Button):
