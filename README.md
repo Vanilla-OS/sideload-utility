@@ -1,5 +1,10 @@
-# Sideload Utility
-A frontend in GTK 4 and Libadwaita to sideload apps in VSO.
+<div align="center">
+    <img src="data/icons/hicolor/scalable/apps/org.vanillaos.Sideload.svg" height="64">
+    <h1>Vanilla Sideload Utility</h1>
+    <p>A frontend in GTK 4 and Libadwaita to sideload apps in VSO.</p>
+    <br />
+    <img src="data/screenshot.png">
+</div>
 
 ## Build
 ### Dependencies
