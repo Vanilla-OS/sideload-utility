@@ -7,3 +7,4 @@ debian/vanilla-sideload-utility.substvars
 debian/debhelper-build-stamp
 debian/files
 test.sh
+obj-x86_64-linux-gnu
