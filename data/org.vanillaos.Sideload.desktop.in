@@ -1,9 +1,10 @@
 [Desktop Entry]
 Name=Sideload
-Exec=vanilla-sideload
+Exec=vanilla-sideload %U
 Icon=org.vanillaos.Sideload
 Terminal=false
 Type=Application
 Categories=GTK;
 StartupNotify=true
 NoDisplay=true
+MimeType=application/x-deb;application/vnd.debian.binary-package;

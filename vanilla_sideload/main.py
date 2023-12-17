@@ -22,11 +22,13 @@ import gi
 import logging
 from gettext import gettext as _
 
+from typing import Optional, Text, List
+
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 gi.require_version("Vte", "3.91")
 
-from gi.repository import Gtk, GLib, Gio, Adw
+from gi.repository import GLib, Gio, Adw
 from vanilla_sideload.window import SideloaderWindow
 from vanilla_sideload.backend.types import ValidSideloadAction
 
@@ -37,19 +39,20 @@ logging.basicConfig(level=logging.INFO)
 class SideloadApplication(Adw.Application):
     """The main application singleton class."""
 
-    __requested_action: ValidSideloadAction
-    __package_path: str
+    __requested_action: Optional[ValidSideloadAction]
+    __package_path: Optional[Text]
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
             application_id="org.vanillaos.Sideload",
             flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
+            register_session=True,
         )
         self.create_action("quit", self.quit, ["<primary>q"])
 
         self.__register_arguments()
 
-    def __register_arguments(self):
+    def __register_arguments(self) -> None:
         """Register command line arguments."""
         self.add_main_option(
             "install",
@@ -68,7 +71,7 @@ class SideloadApplication(Adw.Application):
             None,
         )
 
-    def do_command_line(self, command):
+    def do_command_line(self, command: Gio.ApplicationCommandLine) -> int:
         """Handle command line arguments.
 
         We only have one command line option, --embedded, which
@@ -88,12 +91,17 @@ class SideloadApplication(Adw.Application):
             self.__requested_action = ValidSideloadAction.UNINSTALL
             self.__package_path = uninstall_option.get_string()
         else:
-            print("No action specified")
-            return 0
+            if len(sys.argv) > 1:
+                file_path = sys.argv[1]
+                if file_path.endswith(".deb"):
+                    self.__requested_action = ValidSideloadAction.INSTALL
+                    self.__package_path = file_path
+            else:
+                return 0
 
         return self.do_activate()
 
-    def do_activate(self):
+    def do_activate(self) -> None:
         """Called when the application is activated.
 
         We raise the application's main window, creating it if
@@ -108,7 +116,9 @@ class SideloadApplication(Adw.Application):
             )
         win.present()
 
-    def create_action(self, name, callback, shortcuts=None):
+    def create_action(
+        self, name: Text, callback, shortcuts: Optional[List[Text]] = None
+    ) -> None:
         """Add an application action.
 
         Args:
@@ -124,7 +134,12 @@ class SideloadApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
 
-def main(version):
+def main(version: Text) -> int:
+    print(f"Sideload {version}")
     """The application's entry point."""
     app = SideloadApplication()
     return app.run(sys.argv)
+
+
+if __name__ == "__main__":
+    main("1.0")

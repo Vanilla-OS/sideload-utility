@@ -27,7 +27,7 @@ configure_file(
 )
 
 subdir('backend')
-subdir('utils')
+subdir('views')
 
 vanilla_sideload_sources = [
   '__init__.py',

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="SideloaderLoading" parent="AdwBin">
+    <child>
+      <object class="AdwStatusPage" id="status">
+        <property name="title" translatable="true">Loading</property>
+        <child>
+          <object class="GtkProgressBar" id="progress_bar">
+            <property name="halign">3</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

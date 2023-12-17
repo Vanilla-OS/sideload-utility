@@ -5,6 +5,8 @@ sources = [
   '__init__.py',
   'dpkg.py',
   'types.py',
+  'utils.py',
+  'run_async.py',
 ]
 
 install_data(sources, install_dir: backenddir)

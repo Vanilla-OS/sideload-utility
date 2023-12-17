@@ -1,58 +1,48 @@
-import os
-import tempfile
-import shutil
-import debian.debfile
-from debian.arfile import ArFile
+# dpkg.py
+#
+# Copyright 2023 Vanilla OS Contributors
+#
+# This program is free software: you can rediTextibute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is diTextibuted in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 from typing import List, Optional, Text
 
-
-class DebPackage:
-    def __init__(
-        self,
-        name: Text,
-        description: Text,
-        version: Text,
-        dependencies: List[Text],
-        installed_size: Optional[int] = 0,
-    ):
-        self.name = name
-        self.description = description
-        self.version = version
-        self.dependencies = dependencies
-        self.installed_size = installed_size
-
-        self.installed_size_format = self.__format_size(self.installed_size)
-
-    @staticmethod
-    def __format_size(size: int) -> Text:
-        if size < 1024:
-            return f"{size} B"
-        elif size < 1024**2:
-            return f"{size / 1024:.2f} KB"
-        elif size < 1024**3:
-            return f"{size / 1024 ** 2:.2f} MB"
-        elif size < 1024**4:
-            return f"{size / 1024 ** 3:.2f} GB"
-        else:
-            return f"{size / 1024 ** 4:.2f} TB"
+from debian.debfile import DebFile
+from vanilla_sideload.backend.types import DebPackage
 
 
 class DpkgResolver:
-    def __init__(self, package_path: Text):
-        self.package_path = package_path
+    def __init__(self, package_path: Text) -> None:
+        self.package_path: Text = package_path
 
     def extract_info(self) -> Optional[DebPackage]:
-        with debian.debfile.DebFile(self.package_path) as deb_file:
-            name = deb_file.debcontrol().get("Package", "")
-            description = deb_file.debcontrol().get("Description", "")
-            version = deb_file.debcontrol().get("Version", "")
-            dependencies = deb_file.debcontrol().get("Depends", "").split(", ")
-            installed_size = deb_file.debcontrol().get("Installed-Size", 0)
-
-            installed_size = int(installed_size) if installed_size else 0
+        with DebFile(self.package_path) as deb_file:
+            name: Text = deb_file.debcontrol().get("Package", "")
+            description: Text = deb_file.debcontrol().get("Description", "")
+            version: Text = deb_file.debcontrol().get("Version", "")
+            dependencies: List[Text] = (
+                deb_file.debcontrol().get("Depends", "").split(", ")
+            )
+            installed_size: int = (
+                int(deb_file.debcontrol().get("Installed-Size", 0))
+                if deb_file.debcontrol().get("Installed-Size", 0)
+                else 0
+            )
 
             return DebPackage(
+                path=self.package_path,
                 name=name,
                 description=description,
                 version=version,

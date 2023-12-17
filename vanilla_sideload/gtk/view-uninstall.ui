@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="SideloaderUninstall" parent="AdwBin">
+    <child>
+      <object class="AdwStatusPage" id="status">
+        <property name="icon-name">user-trash-symbolic</property>
+        <property name="description" translatable="true">The application will be removed from the system.</property>
+        <child>
+          <object class="GtkBox">
+            <property name="halign">3</property>
+            <property name="spacing">10</property>
+            <child>
+              <object class="GtkButton">
+                <property name="action-name">app.quit</property>
+                <property name="label" translatable="true">Cancel</property>
+                <property name="halign">3</property>
+                <style>
+                  <class name="pill"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_uninstall">
+                <property name="label" translatable="true">Uninstall</property>
+                <property name="halign">3</property>
+                <style>
+                  <class name="destructive-action"/>
+                  <class name="pill"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

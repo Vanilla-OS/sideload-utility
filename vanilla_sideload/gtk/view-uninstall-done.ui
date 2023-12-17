@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="SideloaderUninstallDone" parent="AdwBin">
+    <child>
+      <object class="AdwStatusPage" id="status">
+        <property name="icon-name">emblem-ok-symbolic</property>
+        <child>
+          <object class="GtkButton">
+            <property name="action-name">app.quit</property>
+            <property name="label" translatable="true">Done</property>
+            <property name="halign">3</property>
+            <style>
+              <class name="pill"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

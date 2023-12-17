@@ -17,55 +17,43 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import time
+from gettext import gettext as _
 from gi.repository import Adw, Gtk
-from typing import Text, Dict, Any, Callable
+from typing import Text, Dict, Any, Callable, Optional
 
-from vanilla_sideload.backend.dpkg import DpkgResolver, DebPackage
-from vanilla_sideload.backend.types import ValidSideloadAction
-from vanilla_sideload.utils.run_async import RunAsync
+from vanilla_sideload.backend.dpkg import DpkgResolver
+from vanilla_sideload.backend.types import ValidSideloadAction, DebPackage
+from vanilla_sideload.views.fail import SideloaderFail
+from vanilla_sideload.views.install_done import SideloaderInstallDone
+from vanilla_sideload.views.install import SideloaderInstall
+from vanilla_sideload.views.loading import SideloaderLoading
+from vanilla_sideload.views.uninstall_done import SideloaderUninstallDone
+from vanilla_sideload.views.uninstall import SideloaderUninstall
 
 
 @Gtk.Template(resource_path="/org/vanillaos/Sideload/gtk/window.ui")
 class SideloaderWindow(Adw.ApplicationWindow):
-    __gtype_name__ = "SideloaderWindow"
+    __gtype_name__: Text = "SideloaderWindow"
 
-    bin_main = Gtk.Template.Child()
+    bin_main: Adw.Bin = Gtk.Template.Child()
 
-    status_install = Gtk.Template.Child()
-    status_uninstall = Gtk.Template.Child()
-    status_loading = Gtk.Template.Child()
-    status_install_done = Gtk.Template.Child()
-    status_uninstall_done = Gtk.Template.Child()
-    status_operation_failed = Gtk.Template.Child()
-
-    btn_install = Gtk.Template.Child()
-    btn_uninstall = Gtk.Template.Child()
-    btn_open = Gtk.Template.Child()
-
-    label_install_size = Gtk.Template.Child()
-
-    progress_bar = Gtk.Template.Child()
-
-    __pkg: DebPackage
-    __must_pulse: bool = False
+    __pkg: Optional[DebPackage] = None
 
     def __init__(
         self,
         pkg_path: Text,
         requested_action: ValidSideloadAction,
         **kwargs: Dict[str, Any],
-    ):
+    ) -> None:
         super().__init__(**kwargs)
-        self.__requested_action = requested_action
-        self.__resolver = DpkgResolver(pkg_path)
+        self.__requested_action: ValidSideloadAction = requested_action
+        self.__resolver: DpkgResolver = DpkgResolver(pkg_path)
 
         self.__build_ui()
 
-    def __build_ui(self):
-        def callback(result, error):
-            self.__must_pulse = False
-
+    def __build_ui(self) -> None:
+        def callback(result: Any, error: Optional[Exception]) -> None:
+            # TODO: handle result
             if self.__requested_action == ValidSideloadAction.INSTALL:
                 if error:
                     self.__build_error_ui(_("Failed reading package information"))
@@ -78,12 +66,7 @@ class SideloaderWindow(Adw.ApplicationWindow):
                     return
                 self.__build_uninstall_ui()
 
-        self.__build_loading_ui(
-            title=_("Reading package information"),
-            description=_("This may take a while..."),
-        )
-
-        async_func: Callable
+        async_func: Callable[[], Any]
         if self.__requested_action == ValidSideloadAction.INSTALL:
             async_func = self.__read_package_info
         elif self.__requested_action == ValidSideloadAction.UNINSTALL:
@@ -91,64 +74,36 @@ class SideloaderWindow(Adw.ApplicationWindow):
         else:
             raise ValueError("Invalid action requested")
 
-        RunAsync(
+        view_loading = SideloaderLoading(
+            _("Reading package information"),
+            _("This may take a while..."),
             async_func,
-            callback=callback,
         )
+        view_loading.connect("done", callback)
 
-    def __build_install_ui(self):
-        self.btn_install.connect("clicked", self.__on_install_clicked)
+        self.bin_main.set_child(view_loading)
 
-        self.status_install.set_title(self.__pkg.name)
-        self.status_install.set_description(self.__pkg.description)
+    def __build_install_ui(self) -> None:
+        view_install = SideloaderInstall(self.__pkg)
+        view_install.connect("done", self.__on_install_done)
+        self.bin_main.set_child(view_install)
 
-        self.label_install_size.set_text(self.__pkg.installed_size_format)
+    def __on_install_done(self, view_install: SideloaderInstall, *args: Any) -> None:
+        view_install_done = SideloaderInstallDone(self.__pkg.name)
+        self.bin_main.set_child(view_install_done)
 
-        self.bin_main.set_child(self.status_install)
+    def __build_uninstall_ui(self) -> None:
+        view_uninstall = SideloaderUninstall(self.__pkg)
+        self.bin_main.set_child(view_uninstall)
 
-    def __build_uninstall_ui(self):
-        self.btn_uninstall.connect("clicked", self.__on_uninstall_clicked)
+    def __build_error_ui(self, error_message: Text) -> None:
+        view_fail = SideloaderFail(error_message)
+        self.bin_main.set_child(view_fail)
 
-        self.status_uninstall.set_title(self.__pkg.name)
-
-        self.bin_main.set_child(self.status_uninstall)
-
-    def __on_install_clicked(self, button: Gtk.Button):
-        print("Install clicked")
-
-    def __on_uninstall_clicked(self, button: Gtk.Button):
-        print("Uninstall clicked")
-
-    def __on_open_clicked(self, button: Gtk.Button):
-        print("Open clicked")
-
-    def __build_error_ui(self, error_message: Text):
-        self.status_operation_failed.set_title(error_message)
-        self.bin_main.set_child(self.status_operation_failed)
-
-    def __read_package_info(self):
+    def __read_package_info(self) -> None:
         self.__pkg = self.__resolver.extract_info()
         if not self.__pkg:
             raise ValueError("Unable to extract package information")
 
-    def __read_installed_package_info(self):
+    def __read_installed_package_info(self) -> None:
         raise NotImplementedError("Not implemented yet")
-
-    def __build_loading_ui(self, title: Text, description: Text):
-        def pulse():
-            while True:
-                if not self.__must_pulse:
-                    break
-
-                self.progress_bar.pulse()
-                time.sleep(0.1)
-
-        self.bin_main.set_child(self.status_loading)
-
-        self.status_loading.set_title(title)
-        self.status_loading.set_description(description)
-
-        self.progress_bar.set_pulse_step(0.1)
-        self.__must_pulse = True
-
-        RunAsync(pulse)
