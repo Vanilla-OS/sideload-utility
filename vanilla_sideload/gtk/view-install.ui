@@ -22,7 +22,7 @@
                         <property name="halign">center</property>
                         <property name="spacing">10</property>
                         <child>
-                          <object class="GtkImage">
+                          <object class="GtkImage" id="img_install_size">
                             <property name="icon-name">drive-harddisk-ieee1394-symbolic</property>
                           </object>
                         </child>

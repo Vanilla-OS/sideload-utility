@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import Optional, Text
+from typing import Text
 import os
 import shutil
 import subprocess
@@ -26,12 +26,23 @@ import subprocess
 class SideloadUtils:
     @staticmethod
     def get_vso_cmd(command: Text) -> Text:
-        if os.path.exists("/run/.containerenv"):
-            vso_bin: Optional[Text] = f"{shutil.which('host-spawn')} vso"
-        else:
-            vso_bin: Optional[Text] = shutil.which("vso")
+        vso_bin: Text = "vso"
+        use_host_spawn: bool = False
 
-        return f"{vso_bin} {command}"
+        if os.path.exists("/run/.containerenv"):
+            use_host_spawn = True
+
+        if os.path.exists(f"{os.getcwd()}/vso"):
+            vso_bin = f"{os.getcwd()}/vso"
+
+        if vso_bin is None:
+            raise FileNotFoundError("vso binary not found")
+
+        return (
+            f"{shutil.which('host-spawn')} {vso_bin} {command}"
+            if use_host_spawn
+            else f"{shutil.which('vso')} {command}"
+        )
 
     @staticmethod
     def run_vso_cmd(command: Text) -> subprocess.CompletedProcess:

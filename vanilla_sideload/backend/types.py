@@ -71,3 +71,48 @@ class DebPackage:
 
     def install(self) -> bool:
         return SideloadUtils.run_vso_cmd(self.install_cmd).returncode == 0
+
+
+class AndroidPackage:
+    def __init__(
+        self,
+        path: Text,
+        name: Text,
+        description: Text,
+        version: Text,
+        dependencies: List[Text],
+        installed_size: Optional[int] = 0,
+    ) -> None:
+        self.path: Text = path
+        self.name: Text = name
+        self.description: Text = description
+        self.version: Text = version
+        self.dependencies: List[Text] = dependencies
+        self.installed_size: int = installed_size
+
+        self.installed_size_format: Text = self.__format_size(self.installed_size)
+
+    @staticmethod
+    def __format_size(size: int) -> Text:
+        if size < 1024:
+            return f"{size} B"
+        elif size < 1024**2:
+            return f"{size / 1024:.2f} KB"
+        elif size < 1024**3:
+            return f"{size / 1024 ** 2:.2f} MB"
+        elif size < 1024**4:
+            return f"{size / 1024 ** 3:.2f} GB"
+        else:
+            return f"{size / 1024 ** 4:.2f} TB"
+
+    @property
+    def install_cmd(self) -> Text:
+        return SideloadUtils.get_vso_cmd(f"android install --local {self.path}")
+
+    @property
+    def install_cmd_as_list(self) -> List[Text]:
+        print(self.install_cmd)
+        return shlex.split(self.install_cmd)
+
+    def install(self) -> bool:
+        return SideloadUtils.run_vso_cmd(self.install_cmd).returncode == 0

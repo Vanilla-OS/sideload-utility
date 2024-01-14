@@ -3,6 +3,7 @@ backenddir = join_paths(pkgdatadir, 'vanilla_sideload/backend')
 
 sources = [
   '__init__.py',
+  'android.py',
   'dpkg.py',
   'types.py',
   'utils.py',

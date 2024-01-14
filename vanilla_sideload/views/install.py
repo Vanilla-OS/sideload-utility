@@ -36,6 +36,7 @@ class SideloaderInstall(Adw.Bin):
     status_details: Adw.StatusPage = Gtk.Template.Child()
     status_installing: Adw.StatusPage = Gtk.Template.Child()
     btn_install: Gtk.Button = Gtk.Template.Child()
+    img_install_size: Gtk.Image = Gtk.Template.Child()
     label_install_size: Gtk.Label = Gtk.Template.Child()
     progress_bar: Gtk.ProgressBar = Gtk.Template.Child()
     box_console_main: Gtk.Box = Gtk.Template.Child()
@@ -70,6 +71,10 @@ class SideloaderInstall(Adw.Bin):
         self.__console.set_font(self.__font)
         self.__console.set_mouse_autohide(True)
         self.box_console.append(self.__console)
+
+        if self.__pkg.installed_size == 0:
+            self.label_install_size.hide()
+            self.img_install_size.hide()
 
         palette: List[Text] = [
             "#353535",

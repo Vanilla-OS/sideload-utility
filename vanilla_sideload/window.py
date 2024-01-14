@@ -22,6 +22,7 @@ from gi.repository import Adw, Gtk
 from typing import Text, Dict, Any, Callable, Optional
 
 from vanilla_sideload.backend.dpkg import DpkgResolver
+from vanilla_sideload.backend.android import AndroidResolver
 from vanilla_sideload.backend.types import ValidSideloadAction, DebPackage
 from vanilla_sideload.views.fail import SideloaderFail
 from vanilla_sideload.views.install_done import SideloaderInstallDone
@@ -46,8 +47,10 @@ class SideloaderWindow(Adw.ApplicationWindow):
         **kwargs: Dict[str, Any],
     ) -> None:
         super().__init__(**kwargs)
+        self.__pkg_path: Text = pkg_path
         self.__requested_action: ValidSideloadAction = requested_action
-        self.__resolver: DpkgResolver = DpkgResolver(pkg_path)
+        self.__aresolver: AndroidResolver = AndroidResolver(pkg_path)
+        self.__dresolver: DpkgResolver = DpkgResolver(pkg_path)
 
         self.__build_ui()
 
@@ -101,7 +104,11 @@ class SideloaderWindow(Adw.ApplicationWindow):
         self.bin_main.set_child(view_fail)
 
     def __read_package_info(self) -> None:
-        self.__pkg = self.__resolver.extract_info()
+        if self.__pkg_path.endswith(".apk"):
+            self.__pkg = self.__aresolver.extract_info()
+        elif self.__pkg_path.endswith(".deb"):
+            self.__pkg = self.__dresolver.extract_info()
+
         if not self.__pkg:
             raise ValueError("Unable to extract package information")
 
