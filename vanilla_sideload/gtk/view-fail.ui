@@ -8,7 +8,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.quit</property>
-            <property name="label" translatable="true">Close</property>
+            <property name="label" translatable="yes">Close</property>
             <property name="halign">3</property>
             <style>
               <class name="pill"/>

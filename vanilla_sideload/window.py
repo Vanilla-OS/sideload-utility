@@ -1,6 +1,6 @@
 # window.py
 #
-# Copyright 2023 Vanilla OS Contributors
+# Copyright 2024 Vanilla OS Contributors
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

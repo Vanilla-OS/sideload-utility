@@ -2,7 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <object class="AdwStatusPage" id="status_install">
-    <property name="description" translatable="true">The application will be installed on the system.</property>
+    <property name="description" translatable="yes">The application will be installed on the system.</property>
     <child>
       <object class="GtkBox">
         <property name="halign">3</property>
@@ -10,7 +10,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.quit</property>
-            <property name="label" translatable="true">Cancel</property>
+            <property name="label" translatable="yes">Cancel</property>
             <property name="halign">3</property>
             <style>
               <class name="pill"/>
@@ -20,7 +20,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.install</property>
-            <property name="label" translatable="true">Install</property>
+            <property name="label" translatable="yes">Install</property>
             <property name="halign">3</property>
             <style>
               <class name="suggested-action"/>
@@ -33,7 +33,7 @@
   </object>
   <object class="AdwStatusPage" id="status_uninstall">
     <property name="icon-name">user-trash-symbolic</property>
-    <property name="description" translatable="true">The application will be removed from the system.</property>
+    <property name="description" translatable="yes">The application will be removed from the system.</property>
     <child>
       <object class="GtkBox">
         <property name="halign">3</property>
@@ -41,7 +41,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.quit</property>
-            <property name="label" translatable="true">Cancel</property>
+            <property name="label" translatable="yes">Cancel</property>
             <property name="halign">3</property>
             <style>
               <class name="pill"/>
@@ -51,7 +51,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.uninstall</property>
-            <property name="label" translatable="true">Uninstall</property>
+            <property name="label" translatable="yes">Uninstall</property>
             <property name="halign">3</property>
             <style>
               <class name="destructive-action"/>
@@ -71,7 +71,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.quit</property>
-            <property name="label" translatable="true">Done</property>
+            <property name="label" translatable="yes">Done</property>
             <style>
               <class name="pill"/>
             </style>
@@ -80,7 +80,7 @@
         <child>
           <object class="GtkButton">
             <property name="action-name">app.open</property>
-            <property name="label" translatable="true">Open</property>
+            <property name="label" translatable="yes">Open</property>
             <style>
               <class name="pill"/>
               <class name="suggested-action"/>
@@ -95,7 +95,7 @@
     <child>
       <object class="GtkButton">
         <property name="action-name">app.quit</property>
-        <property name="label" translatable="true">Done</property>
+        <property name="label" translatable="yes">Done</property>
         <property name="halign">3</property>
         <style>
           <class name="pill"/>

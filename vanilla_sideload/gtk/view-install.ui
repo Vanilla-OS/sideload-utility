@@ -41,7 +41,7 @@
                         <child>
                           <object class="GtkButton">
                             <property name="action-name">app.quit</property>
-                            <property name="label" translatable="true">Cancel</property>
+                            <property name="label" translatable="yes">Cancel</property>
                             <property name="halign">3</property>
                             <style>
                               <class name="pill"/>
@@ -50,7 +50,7 @@
                         </child>
                         <child>
                           <object class="GtkButton" id="btn_install">
-                            <property name="label" translatable="true">Install</property>
+                            <property name="label" translatable="yes">Install</property>
                             <property name="halign">3</property>
                             <style>
                               <class name="suggested-action"/>
@@ -71,8 +71,8 @@
             <property name="name">installing</property>
             <property name="child">
               <object class="AdwStatusPage" id="status_installing">
-                <property name="title" translatable="true">Installing package</property>
-                <property name="description" translatable="true">This may take a while</property>
+                <property name="title" translatable="yes">Installing package</property>
+                <property name="description" translatable="yes">This may take a while</property>
                 <child>
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
@@ -102,7 +102,7 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="btn_console">
-                        <property name="label" translatable="true">Show Output</property>
+                        <property name="label" translatable="yes">Show Output</property>
                         <property name="halign">center</property>
                         <style>
                           <class name="pill" />
