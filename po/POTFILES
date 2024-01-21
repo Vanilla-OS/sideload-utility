@@ -1,6 +1,14 @@
 data/org.vanillaos.Sideload.desktop.in
 data/org.vanillaos.Sideload.appdata.xml.in
 data/org.vanillaos.Sideload.gschema.xml
-src/main.py
-src/window.py
-src/window.ui
+vanilla_sideload/main.py
+vanilla_sideload/window.py
+vanilla_sideload/window.ui
+vanilla_sideload/gtk/help-overlay.ui
+vanilla_sideload/gtk/view-fail.ui
+vanilla_sideload/gtk/view-install-done.ui
+vanilla_sideload/gtk/view-install.ui
+vanilla_sideload/gtk/view-loading.ui
+vanilla_sideload/gtk/view-uninstall-done.ui
+vanilla_sideload/gtk/view-uninstall.ui
+vanilla_sideload/gtk/window.ui

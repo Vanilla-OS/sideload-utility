@@ -5,7 +5,7 @@
     <child>
       <object class="AdwStatusPage" id="status">
         <property name="icon-name">user-trash-symbolic</property>
-        <property name="description" translatable="true">The application will be removed from the system.</property>
+        <property name="description" translatable="yes">The application will be removed from the system.</property>
         <child>
           <object class="GtkBox">
             <property name="halign">3</property>
@@ -13,7 +13,7 @@
             <child>
               <object class="GtkButton">
                 <property name="action-name">app.quit</property>
-                <property name="label" translatable="true">Cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="halign">3</property>
                 <style>
                   <class name="pill"/>
@@ -22,7 +22,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btn_uninstall">
-                <property name="label" translatable="true">Uninstall</property>
+                <property name="label" translatable="yes">Uninstall</property>
                 <property name="halign">3</property>
                 <style>
                   <class name="destructive-action"/>
