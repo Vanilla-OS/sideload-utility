@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vanilla-sideload package.
+# bittin1ddc447d824349b2 <bittin@reimu.nl>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: vanilla-sideload\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-22 00:01+0530\n"
+"PO-Revision-Date: 2024-01-25 01:01+0000\n"
+"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/vanilla-os/"
+"sideload-utility/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+
+#: data/org.vanillaos.Sideload.desktop.in:3
+msgid "Sideload"
+msgstr "Sidladda"
+
+#: data/org.vanillaos.Sideload.appdata.xml.in:7
+msgid "No description"
+msgstr "Ingen beskrivning"
+
+#: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
+msgid "Failed reading package information"
+msgstr "Misslyckades med att läsa paketinformation"
+
+#: vanilla_sideload/window.py:81
+msgid "Reading package information"
+msgstr "Läser paketinformation"
+
+#: vanilla_sideload/window.py:82
+msgid "This may take a while..."
+msgstr "Det här kan ta ett tag..."
+
+#: vanilla_sideload/window.ui:5
+msgid "The application will be installed on the system."
+msgstr "Denna applikationen kommer att installeras på systemet."
+
+#: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
+#: vanilla_sideload/gtk/view-install.ui:44
+#: vanilla_sideload/gtk/view-uninstall.ui:16
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: vanilla_sideload/window.ui:23 vanilla_sideload/gtk/view-install.ui:53
+msgid "Install"
+msgstr "Installera"
+
+#: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
+msgid "The application will be removed from the system."
+msgstr "Denna applikationen kommer att tas bort från systemet."
+
+#: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
+msgid "Uninstall"
+msgstr "Avinstallera"
+
+#: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
+#: vanilla_sideload/gtk/view-install-done.ui:17
+#: vanilla_sideload/gtk/view-uninstall-done.ui:11
+msgid "Done"
+msgstr "Färdigt"
+
+#: vanilla_sideload/window.ui:83 vanilla_sideload/gtk/view-install-done.ui:25
+msgid "Open"
+msgstr "Öppna"
+
+#: vanilla_sideload/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Allmänt"
+
+#: vanilla_sideload/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Visa genvägar"
+
+#: vanilla_sideload/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avsluta"
+
+#: vanilla_sideload/gtk/view-fail.ui:11
+msgid "Close"
+msgstr "Stäng"
+
+#: vanilla_sideload/gtk/view-install-done.ui:8
+msgid "Installation complete"
+msgstr "Installation slutförd"
+
+#: vanilla_sideload/gtk/view-install-done.ui:9
+msgid "The package was successfully installed."
+msgstr "Paketet installerades framgångsrikt."
+
+#: vanilla_sideload/gtk/view-install.ui:74
+msgid "Installing package"
+msgstr "Installerar paket"
+
+#: vanilla_sideload/gtk/view-install.ui:75
+msgid "This may take a while"
+msgstr "Det här kan ta ett tag"
+
+#: vanilla_sideload/gtk/view-install.ui:105
+msgid "Show Output"
+msgstr "Visa utdata"
+
+#: vanilla_sideload/gtk/view-loading.ui:7
+msgid "Loading"
+msgstr "Laddar"
