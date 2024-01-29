@@ -93,7 +93,7 @@ class SideloadApplication(Adw.Application):
         else:
             if len(sys.argv) > 1:
                 file_path = sys.argv[1]
-                if file_path.endswith(".deb"):
+                if file_path.endswith(".deb") or file_path.endswith(".apk"):
                     self.__requested_action = ValidSideloadAction.INSTALL
                     self.__package_path = file_path
             else:
