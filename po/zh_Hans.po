@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 00:01+0530\n"
+"POT-Creation-Date: 2024-01-29 21:44+0530\n"
 "PO-Revision-Date: 2024-01-26 12:01+0000\n"
 "Last-Translator: lakejason0 <sunliyuan200402@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -66,7 +66,7 @@ msgstr "卸载"
 msgid "Done"
 msgstr "完成"
 
-#: vanilla_sideload/window.ui:83 vanilla_sideload/gtk/view-install-done.ui:25
+#: vanilla_sideload/window.ui:83
 msgid "Open"
 msgstr "打开"
 
