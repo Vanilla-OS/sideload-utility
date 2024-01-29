@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vanilla-sideload package.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: vanilla-sideload\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-22 00:01+0530\n"
+"PO-Revision-Date: 2024-01-21 20:12+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/vanilla-os/"
+"sideload-utility/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+
+#: data/org.vanillaos.Sideload.desktop.in:3
+msgid "Sideload"
+msgstr "பக்கவாட்டு"
+
+#: data/org.vanillaos.Sideload.appdata.xml.in:7
+msgid "No description"
+msgstr "விளக்கம் இல்லை"
+
+#: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
+msgid "Failed reading package information"
+msgstr "தொகுப்பு தகவலைப் படிக்க முடியவில்லை"
+
+#: vanilla_sideload/window.py:81
+msgid "Reading package information"
+msgstr "தொகுப்புத் தகவலைப் படிக்கிறது"
+
+#: vanilla_sideload/window.py:82
+msgid "This may take a while..."
+msgstr "இதற்கு சிறிது நேரம் ஆகலாம்..."
+
+#: vanilla_sideload/window.ui:5
+msgid "The application will be installed on the system."
+msgstr "பயன்பாடு கணினியில் நிறுவப்படும்."
+
+#: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
+#: vanilla_sideload/gtk/view-install.ui:44
+#: vanilla_sideload/gtk/view-uninstall.ui:16
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: vanilla_sideload/window.ui:23 vanilla_sideload/gtk/view-install.ui:53
+msgid "Install"
+msgstr "நிறுவு"
+
+#: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
+msgid "The application will be removed from the system."
+msgstr "கணினியிலிருந்து பயன்பாடு அகற்றப்படும்."
+
+#: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
+msgid "Uninstall"
+msgstr "நிறுவல் நீக்கு"
+
+#: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
+#: vanilla_sideload/gtk/view-install-done.ui:17
+#: vanilla_sideload/gtk/view-uninstall-done.ui:11
+msgid "Done"
+msgstr "முடிந்தது"
+
+#: vanilla_sideload/window.ui:83 vanilla_sideload/gtk/view-install-done.ui:25
+msgid "Open"
+msgstr "திறக்கவும்"
+
+#: vanilla_sideload/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "பொது"
+
+#: vanilla_sideload/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "குறுக்குவழிகளைக் காட்டு"
+
+#: vanilla_sideload/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "வெளியேறு"
+
+#: vanilla_sideload/gtk/view-fail.ui:11
+msgid "Close"
+msgstr "மூடு"
+
+#: vanilla_sideload/gtk/view-install-done.ui:8
+msgid "Installation complete"
+msgstr "நிறுவல் முடிந்தது"
+
+#: vanilla_sideload/gtk/view-install-done.ui:9
+msgid "The package was successfully installed."
+msgstr "தொகுப்பு வெற்றிகரமாக நிறுவப்பட்டது."
+
+#: vanilla_sideload/gtk/view-install.ui:74
+msgid "Installing package"
+msgstr "தொகுப்பை நிறுவுகிறது"
+
+#: vanilla_sideload/gtk/view-install.ui:75
+msgid "This may take a while"
+msgstr "இதற்கு சிறிது நேரம் ஆகலாம்"
+
+#: vanilla_sideload/gtk/view-install.ui:105
+msgid "Show Output"
+msgstr "வெளியீட்டைக் காட்டு"
+
+#: vanilla_sideload/gtk/view-loading.ui:7
+msgid "Loading"
+msgstr "ஏற்றுகிறது"
