@@ -47,6 +47,10 @@ class DebPackage:
         self.installed_size: int = installed_size
 
         self.installed_size_format: Text = self.__format_size(self.installed_size)
+    
+    @property
+    def entity_type(self) -> Text:
+        return "deb"
 
     @staticmethod
     def __format_size(size: int) -> Text:
@@ -91,6 +95,10 @@ class AndroidPackage:
         self.installed_size: int = installed_size
 
         self.installed_size_format: Text = self.__format_size(self.installed_size)
+    
+    @property
+    def entity_type(self) -> Text:
+        return "android"
 
     @staticmethod
     def __format_size(size: int) -> Text:
@@ -111,8 +119,11 @@ class AndroidPackage:
 
     @property
     def install_cmd_as_list(self) -> List[Text]:
-        print(self.install_cmd)
         return shlex.split(self.install_cmd)
 
     def install(self) -> bool:
         return SideloadUtils.run_vso_cmd(self.install_cmd).returncode == 0
+
+    @property
+    def status(self) -> int:
+        return SideloadUtils.run_vso_cmd("android status").returncode

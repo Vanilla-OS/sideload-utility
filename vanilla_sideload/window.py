@@ -87,7 +87,7 @@ class SideloaderWindow(Adw.ApplicationWindow):
         self.bin_main.set_child(view_loading)
 
     def __build_install_ui(self) -> None:
-        view_install = SideloaderInstall(self.__pkg)
+        view_install = SideloaderInstall(self, self.__pkg)
         view_install.connect("done", self.__on_install_done)
         self.bin_main.set_child(view_install)
 

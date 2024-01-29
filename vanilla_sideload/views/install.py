@@ -50,9 +50,10 @@ class SideloaderInstall(Adw.Bin):
     __bg: Gdk.RGBA
     __colors: List[Gdk.RGBA]
 
-    def __init__(self, pkg: DebPackage, **kwargs: Any) -> None:
+    def __init__(self, window: Adw.ApplicationWindow, pkg: DebPackage, **kwargs: Any) -> None:
         super().__init__(**kwargs)
 
+        self.__window = window
         self.__pkg = pkg
         self.__build_ui()
 
@@ -119,16 +120,42 @@ class SideloaderInstall(Adw.Bin):
         self.__console.connect("child-exited", self.on_vte_child_exited)
 
     def __on_install_clicked(self, btn: Gtk.Button) -> None:
-        self.stack_main.set_visible_child_name("installing")
-        self.progress_bar.pulse()
-        self.__console.spawn_sync(
-            Vte.PtyFlags.DEFAULT,
-            None,
-            self.__pkg.install_cmd_as_list,
-            [],
-            GLib.SpawnFlags.DO_NOT_REAP_CHILD,
-            None,
-        )
+        proceed: bool = True
+
+        if self.__pkg.entity_type == "android":
+            if self.__pkg.status == 1:
+                proceed = False
+
+                def on_response(dialog: Adw.MessageDialog, response: Text) -> None:
+                    if response == "ok":
+                        GLib.spawn_async(
+                            ["kgx", "-e", "vso", "android", "init"],
+                            flags=GLib.SpawnFlags.SEARCH_PATH,
+                        )
+                    dialog.destroy()
+
+                dialog: Adw.MessageDialog = Adw.MessageDialog.new(
+                    self.__window,
+                    _("The Android subsystem is not initialized"),
+                    _("You have to initialize the Android subsystem before installing Android packages. Do you want to initialize it now?"),
+                )
+                dialog.add_response("cancel", _("Cancel"))
+                dialog.add_response("ok", _("Initialize"))
+                dialog.set_response_appearance("ok", Adw.ResponseAppearance.SUGGESTED)
+                dialog.connect("response", on_response)
+                dialog.present()
+        
+        if proceed:
+            self.stack_main.set_visible_child_name("installing")
+            self.progress_bar.pulse()
+            self.__console.spawn_sync(
+                Vte.PtyFlags.DEFAULT,
+                None,
+                self.__pkg.install_cmd_as_list,
+                [],
+                GLib.SpawnFlags.DO_NOT_REAP_CHILD,
+                None,
+            )
 
     def on_vte_child_exited(
         self, console: Vte.Terminal, status: int, *args: Any
