@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vanilla-sideload package.
+# David González <iwisp360@hotmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: vanilla-sideload\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-22 00:01+0530\n"
+"PO-Revision-Date: 2024-01-29 00:02+0000\n"
+"Last-Translator: David González <iwisp360@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
+"sideload-utility/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
+
+#: data/org.vanillaos.Sideload.desktop.in:3
+msgid "Sideload"
+msgstr "Instalador"
+
+#: data/org.vanillaos.Sideload.appdata.xml.in:7
+msgid "No description"
+msgstr "Sin descripción"
+
+#: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
+msgid "Failed reading package information"
+msgstr "Error en la lectura de la información del paquete"
+
+#: vanilla_sideload/window.py:81
+msgid "Reading package information"
+msgstr "Cargando información del paquete"
+
+#: vanilla_sideload/window.py:82
+msgid "This may take a while..."
+msgstr "Esto puede tomar unos momentos..."
+
+#: vanilla_sideload/window.ui:5
+msgid "The application will be installed on the system."
+msgstr "La aplicación será instalada en el sistema."
+
+#: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
+#: vanilla_sideload/gtk/view-install.ui:44
+#: vanilla_sideload/gtk/view-uninstall.ui:16
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: vanilla_sideload/window.ui:23 vanilla_sideload/gtk/view-install.ui:53
+msgid "Install"
+msgstr "Instalar"
+
+#: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
+msgid "The application will be removed from the system."
+msgstr "La aplicación será desinstalada del sistema."
+
+#: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+#: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
+#: vanilla_sideload/gtk/view-install-done.ui:17
+#: vanilla_sideload/gtk/view-uninstall-done.ui:11
+msgid "Done"
+msgstr "Listo"
+
+#: vanilla_sideload/window.ui:83 vanilla_sideload/gtk/view-install-done.ui:25
+msgid "Open"
+msgstr "Abrir"
+
+#: vanilla_sideload/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: vanilla_sideload/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Mostrar Atajos"
+
+#: vanilla_sideload/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: vanilla_sideload/gtk/view-fail.ui:11
+msgid "Close"
+msgstr "Cerrar"
+
+#: vanilla_sideload/gtk/view-install-done.ui:8
+msgid "Installation complete"
+msgstr "Instalación completada"
+
+#: vanilla_sideload/gtk/view-install-done.ui:9
+msgid "The package was successfully installed."
+msgstr "El paquete ha sido instalado exitosamente."
+
+#: vanilla_sideload/gtk/view-install.ui:74
+msgid "Installing package"
+msgstr "Instalando paquete"
+
+#: vanilla_sideload/gtk/view-install.ui:75
+msgid "This may take a while"
+msgstr "Esto puede tomar un momento"
+
+#: vanilla_sideload/gtk/view-install.ui:105
+msgid "Show Output"
+msgstr "Mostrar Salida"
+
+#: vanilla_sideload/gtk/view-loading.ui:7
+msgid "Loading"
+msgstr "Cargando"
