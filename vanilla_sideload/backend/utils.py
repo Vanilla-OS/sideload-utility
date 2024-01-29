@@ -31,17 +31,20 @@ class SideloadUtils:
 
         if os.path.exists("/run/.containerenv"):
             use_host_spawn = True
+        
+        if os.path.exists(f"{os.environ['VSO_PATH']}/vso"):
+            vso_bin = f"{os.environ['VSO_PATH']}/vso"
 
-        if os.path.exists(f"{os.getcwd()}/vso"):
+        elif os.path.exists(f"{os.getcwd()}/vso"):
             vso_bin = f"{os.getcwd()}/vso"
 
-        if vso_bin is None:
-            raise FileNotFoundError("vso binary not found")
+        elif vso_bin is None:
+            vso_bin = shutil.which("vso")
 
         return (
             f"{shutil.which('host-spawn')} {vso_bin} {command}"
             if use_host_spawn
-            else f"{shutil.which('vso')} {command}"
+            else f"{vso_bin} {command}"
         )
 
     @staticmethod
