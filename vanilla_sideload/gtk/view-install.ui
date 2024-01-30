@@ -71,7 +71,7 @@
             <property name="name">installing</property>
             <property name="child">
               <object class="AdwStatusPage" id="status_installing">
-                <property name="title" translatable="yes">Installing package</property>
+                <property name="title" translatable="yes">Installing Package</property>
                 <property name="description" translatable="yes">This may take a while</property>
                 <child>
                   <object class="GtkBox">
