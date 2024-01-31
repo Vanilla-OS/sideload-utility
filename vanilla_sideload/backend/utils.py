@@ -31,8 +31,10 @@ class SideloadUtils:
 
         if os.path.exists("/run/.containerenv"):
             use_host_spawn = True
-        
-        if os.path.exists(f"{os.environ['VSO_PATH']}/vso"):
+
+        if os.environ.get("VSO_PATH") and os.path.exists(
+            f"{os.environ.get('VSO_PATH')}/vso"
+        ):
             vso_bin = f"{os.environ['VSO_PATH']}/vso"
 
         elif os.path.exists(f"{os.getcwd()}/vso"):
