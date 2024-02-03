@@ -48,7 +48,7 @@ class SideloadApplication(Adw.Application):
             flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
             register_session=True,
         )
-        self.create_action("quit", self.quit, ["<primary>q"])
+        self.create_action("quit", self.close_app, ["<primary>q"])
 
         self.__register_arguments()
 
@@ -132,6 +132,10 @@ class SideloadApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+
+    def close_app(self, *args) -> None:
+        """Quit the application."""
+        self.quit()
 
 
 def main(version: Text) -> int:
