@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # Experiencing A Significant Gravitas Shortfall <bedeb1@pm.me>, 2024.
+# Ettore Atalan <atalanttore@googlemail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-06-02 21:55+0000\n"
-"Last-Translator: Experiencing A Significant Gravitas Shortfall <bedeb1@pm.me>"
-"\n"
+"PO-Revision-Date: 2024-06-17 12:09+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/de/>\n"
 "Language: de\n"
@@ -20,9 +20,8 @@ msgstr ""
 "X-Generator: Weblate 5.6-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
-#, fuzzy
 msgid "Sideload"
-msgstr "Side-load"
+msgstr "Querladen"
 
 #: data/org.vanillaos.Sideload.appdata.xml.in:7
 msgid "No description"
