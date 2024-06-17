@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-02-25 09:41+0000\n"
+"PO-Revision-Date: 2024-05-30 05:44+0000\n"
 "Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/nl/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
@@ -24,7 +24,7 @@ msgstr "Sideloaden"
 
 #: data/org.vanillaos.Sideload.appdata.xml.in:7
 msgid "No description"
-msgstr "Geen omschrijving"
+msgstr "Geen omschrĳving"
 
 #: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
 msgid "Failed reading package information"
@@ -54,11 +54,11 @@ msgstr "Installeren (install)"
 
 #: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
 msgid "The application will be removed from the system."
-msgstr "De app zal worden verwijderd van het systeem."
+msgstr "De app zal worden verwĳderd van het systeem."
 
 #: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
 msgid "Uninstall"
-msgstr "Verwijderen"
+msgstr "Verwĳderen"
 
 #: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
 #: vanilla_sideload/gtk/view-install-done.ui:17
@@ -78,7 +78,7 @@ msgstr "Algemeen"
 #: vanilla_sideload/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Snel­toetsen tonen"
+msgstr "Sneltoetsen tonen"
 
 #: vanilla_sideload/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
