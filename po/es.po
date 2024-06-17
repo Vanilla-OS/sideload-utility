@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # David González <iwisp360@hotmail.com>, 2024.
+# gallegonovato <fran-carro@hotmail.es>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-01-29 00:02+0000\n"
-"Last-Translator: David González <iwisp360@hotmail.com>\n"
+"PO-Revision-Date: 2024-06-03 12:30+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/es/>\n"
 "Language: es\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
@@ -78,12 +79,12 @@ msgstr "General"
 #: vanilla_sideload/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Mostrar Atajos"
+msgstr "Mostrar atajos"
 
 #: vanilla_sideload/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Quitar"
+msgstr "Salir"
 
 #: vanilla_sideload/gtk/view-fail.ui:11
 msgid "Close"
