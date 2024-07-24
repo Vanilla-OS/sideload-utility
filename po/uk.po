@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the vanilla-sideload package.
 # andrij <Kalenskuja@gmail.com>, 2024.
 # Ian Kazantzidis <saddam.h1488@proton.me>, 2024.
+# "K.B.Dharun Krishna" <kbdharunkrishna@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-07-22 20:30+0000\n"
-"Last-Translator: Ian Kazantzidis <saddam.h1488@proton.me>\n"
+"PO-Revision-Date: 2024-07-24 07:09+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/uk/>\n"
 "Language: uk\n"
@@ -26,9 +27,7 @@ msgstr "Sideload"
 
 #: data/org.vanillaos.Sideload.appdata.xml.in:7
 msgid "No description"
-msgstr ""
-"Без опису, поширеного композиційно-стилістичного способу викладу матеріалу в "
-"художньому, передусім епічному творі"
+msgstr "Без опису"
 
 #: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
 msgid "Failed reading package information"
