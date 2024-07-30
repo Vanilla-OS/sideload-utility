@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vanilla-sideload package.
+# Muhammad Bahaa <muhammad.bahaa1@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: vanilla-sideload\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 21:44+0530\n"
+"PO-Revision-Date: 2024-07-27 17:09+0000\n"
+"Last-Translator: Muhammad Bahaa <muhammad.bahaa1@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/vanilla-os/"
+"sideload-utility/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.7-dev\n"
+
+#: data/org.vanillaos.Sideload.desktop.in:3
+msgid "Sideload"
+msgstr "التثبيت الجانبي"
+
+#: data/org.vanillaos.Sideload.appdata.xml.in:7
+msgid "No description"
+msgstr "لا يوجد وصف"
+
+#: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
+msgid "Failed reading package information"
+msgstr "فشل في قراءة معلومات الحزمة"
+
+#: vanilla_sideload/window.py:81
+msgid "Reading package information"
+msgstr "جارٍ قراءة معلومات الحزمة"
+
+#: vanilla_sideload/window.py:82
+msgid "This may take a while..."
+msgstr "قد يستغرق هذا بعض الوقت..."
+
+#: vanilla_sideload/window.ui:5
+msgid "The application will be installed on the system."
+msgstr "سيتم تثبيت التطبيق على النظام."
+
+#: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
+#: vanilla_sideload/gtk/view-install.ui:44
+#: vanilla_sideload/gtk/view-uninstall.ui:16
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: vanilla_sideload/window.ui:23 vanilla_sideload/gtk/view-install.ui:53
+msgid "Install"
+msgstr "تثبيت"
+
+#: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
+msgid "The application will be removed from the system."
+msgstr "سيتم إزالة التطبيق من النظام."
+
+#: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
+msgid "Uninstall"
+msgstr "إلغاء تثبيت"
+
+#: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
+#: vanilla_sideload/gtk/view-install-done.ui:17
+#: vanilla_sideload/gtk/view-uninstall-done.ui:11
+msgid "Done"
+msgstr "تم"
+
+#: vanilla_sideload/window.ui:83
+msgid "Open"
+msgstr "فتح"
+
+#: vanilla_sideload/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "عام"
+
+#: vanilla_sideload/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "عرض الاختصارات"
+
+#: vanilla_sideload/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "خروج"
+
+#: vanilla_sideload/gtk/view-fail.ui:11
+msgid "Close"
+msgstr "إغلاق"
+
+#: vanilla_sideload/gtk/view-install-done.ui:8
+msgid "Installation complete"
+msgstr "اكتمل التثبيت"
+
+#: vanilla_sideload/gtk/view-install-done.ui:9
+msgid "The package was successfully installed."
+msgstr "تم تثبيت الحزمة بنجاح."
+
+#: vanilla_sideload/gtk/view-install.ui:74
+msgid "Installing package"
+msgstr "جارٍ تثبيت الحزمة"
+
+#: vanilla_sideload/gtk/view-install.ui:75
+msgid "This may take a while"
+msgstr "قد يستغرق هذا بعض الوقت"
+
+#: vanilla_sideload/gtk/view-install.ui:105
+msgid "Show Output"
+msgstr "عرض الإخراج"
+
+#: vanilla_sideload/gtk/view-loading.ui:7
+msgid "Loading"
+msgstr "جارٍ التحميل"
