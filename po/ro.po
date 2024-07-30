@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # Gabriel Cozma <me@gabs.eu.org>, 2024.
+# supernova <76390419+driedpampas@users.noreply.github.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-03-18 17:01+0000\n"
-"Last-Translator: Gabriel Cozma <me@gabs.eu.org>\n"
+"PO-Revision-Date: 2024-07-29 01:24+0000\n"
+"Last-Translator: supernova <76390419+driedpampas@users.noreply.github.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/ro/>\n"
 "Language: ro\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
@@ -79,7 +80,7 @@ msgstr "General"
 #: vanilla_sideload/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Afișează comenzi rapide"
+msgstr "Afișați comenzile rapide"
 
 #: vanilla_sideload/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
