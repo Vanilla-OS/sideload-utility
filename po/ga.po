@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vanilla-sideload package.
+# Aindriú Mac Giolla Eoin <aindriu80@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: vanilla-sideload\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-29 21:44+0530\n"
+"PO-Revision-Date: 2024-08-13 10:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@gmail.com>\n"
+"Language-Team: Irish <https://hosted.weblate.org/projects/vanilla-os/"
+"sideload-utility/ga/>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :("
+"n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.7-dev\n"
+
+#: data/org.vanillaos.Sideload.desktop.in:3
+msgid "Sideload"
+msgstr "Taobh-ualach"
+
+#: data/org.vanillaos.Sideload.appdata.xml.in:7
+msgid "No description"
+msgstr "Gan tuairisc"
+
+#: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
+msgid "Failed reading package information"
+msgstr "Theip ar léamh faisnéise an phacáiste"
+
+#: vanilla_sideload/window.py:81
+msgid "Reading package information"
+msgstr "Léamh eolas pacáiste"
+
+#: vanilla_sideload/window.py:82
+msgid "This may take a while..."
+msgstr "Seans go dtógfaidh sé seo tamall..."
+
+#: vanilla_sideload/window.ui:5
+msgid "The application will be installed on the system."
+msgstr "Déanfar an feidhmchlár a shuiteáil ar an gcóras."
+
+#: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
+#: vanilla_sideload/gtk/view-install.ui:44
+#: vanilla_sideload/gtk/view-uninstall.ui:16
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: vanilla_sideload/window.ui:23 vanilla_sideload/gtk/view-install.ui:53
+msgid "Install"
+msgstr "Suiteáil"
+
+#: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
+msgid "The application will be removed from the system."
+msgstr "Bainfear an feidhmchlár as an gcóras."
+
+#: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
+msgid "Uninstall"
+msgstr "Díshuiteáil"
+
+#: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
+#: vanilla_sideload/gtk/view-install-done.ui:17
+#: vanilla_sideload/gtk/view-uninstall-done.ui:11
+msgid "Done"
+msgstr "Déanta"
+
+#: vanilla_sideload/window.ui:83
+msgid "Open"
+msgstr "Oscail"
+
+#: vanilla_sideload/gtk/help-overlay.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ginearálta"
+
+#: vanilla_sideload/gtk/help-overlay.ui:14
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Taispeáin Aicearraí"
+
+#: vanilla_sideload/gtk/help-overlay.ui:20
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Scoir"
+
+#: vanilla_sideload/gtk/view-fail.ui:11
+msgid "Close"
+msgstr "Dún"
+
+#: vanilla_sideload/gtk/view-install-done.ui:8
+msgid "Installation complete"
+msgstr "Suiteáil críochnaithe"
+
+#: vanilla_sideload/gtk/view-install-done.ui:9
+msgid "The package was successfully installed."
+msgstr "Suiteáladh an pacáiste go rathúil."
+
+#: vanilla_sideload/gtk/view-install.ui:74
+msgid "Installing package"
+msgstr "Pacáiste a shuiteáil"
+
+#: vanilla_sideload/gtk/view-install.ui:75
+msgid "This may take a while"
+msgstr "Seans go dtógfaidh sé seo tamall"
+
+#: vanilla_sideload/gtk/view-install.ui:105
+msgid "Show Output"
+msgstr "Taispeáin Aschur"
+
+#: vanilla_sideload/gtk/view-loading.ui:7
+msgid "Loading"
+msgstr "Ag lódáil"
