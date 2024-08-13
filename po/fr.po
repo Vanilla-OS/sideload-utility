@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # Silvan De La Rosa <lvllaby@pm.me>, 2024.
+# Xabi GOITY <xabigoity@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-02-03 17:01+0000\n"
-"Last-Translator: Silvan De La Rosa <lvllaby@pm.me>\n"
+"PO-Revision-Date: 2024-08-11 19:55+0000\n"
+"Last-Translator: Xabi GOITY <xabigoity@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/fr/>\n"
 "Language: fr\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
@@ -78,7 +79,7 @@ msgstr "Général"
 #: vanilla_sideload/gtk/help-overlay.ui:14
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Montrer les raccourcis"
+msgstr "Afficher les raccourcis"
 
 #: vanilla_sideload/gtk/help-overlay.ui:20
 msgctxt "shortcut window"
