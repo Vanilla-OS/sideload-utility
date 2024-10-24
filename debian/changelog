@@ -1,5 +1,12 @@
+vanilla-sideload-utility (1.0.1) unstable; urgency=medium
+
+  * New translation updates
+  * Fixed install prefix
+
+ -- Dharun Krishna <mail@kbdharun.dev>  Thu, 24 Oct 2024 21:06:00 +0000
+
 vanilla-sideload-utility (1.0.0) unstable; urgency=medium
 
   * First release
 
- -- Mirko Brombin <send@mirko.pm>  Sat, 17 Sep 2023 21:06:00 +0000
+ -- Mirko Brombin <send@mirko.pm>  Sat, 27 Jul 2024 21:06:00 +0000
