@@ -67,7 +67,7 @@ class DebPackage:
 
     @property
     def install_cmd(self) -> Text:
-        return SideloadUtils.get_vso_cmd(f"sideload -- -y {self.path}")
+        return SideloadUtils.get_vso_cmd(f"sideload -- {self.path}")
 
     @property
     def install_cmd_as_list(self) -> List[Text]:
