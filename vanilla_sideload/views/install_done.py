@@ -27,6 +27,7 @@ class SideloaderInstallDone(Adw.Bin):
     __gtype_name__ = "SideloaderInstallDone"
 
     status = Gtk.Template.Child()
+    btn_logs = Gtk.Template.Child()
 
     def __init__(self, package_name: Text, **kwargs):
         super().__init__(**kwargs)
