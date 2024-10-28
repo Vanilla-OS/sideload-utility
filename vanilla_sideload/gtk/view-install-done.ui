@@ -17,9 +17,19 @@
                 <property name="label" translatable="yes">Done</property>
                 <style>
                   <class name="pill"/>
+                  <class name="suggested-action"/>
                 </style>
               </object>
             </child>
+            <child>
+              <object class="GtkButton" id="btn_logs">
+                  <property name="label">View Logs</property>
+                  <property name="visible">true</property>
+                  <style>
+                      <class name="pill"/>
+                  </style>
+              </object>
+          </child>
           </object>
         </child>
       </object>

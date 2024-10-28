@@ -42,6 +42,7 @@ class SideloaderInstall(Adw.Bin):
     box_console_main: Gtk.Box = Gtk.Template.Child()
     box_console: Gtk.Box = Gtk.Template.Child()
     btn_console: Gtk.Button = Gtk.Template.Child()
+    btn_quit: Gtk.Button = Gtk.Template.Child()
 
     __pkg: DebPackage
     __console: Vte.Terminal

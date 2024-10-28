@@ -87,12 +87,13 @@ class SideloaderWindow(Adw.ApplicationWindow):
         self.bin_main.set_child(view_loading)
 
     def __build_install_ui(self) -> None:
-        view_install = SideloaderInstall(self, self.__pkg)
-        view_install.connect("done", self.__on_install_done)
-        self.bin_main.set_child(view_install)
+        self.view_install = SideloaderInstall(self, self.__pkg)
+        self.view_install.connect("done", self.__on_install_done)
+        self.bin_main.set_child(self.view_install)
 
     def __on_install_done(self, view_install: SideloaderInstall, *args: Any) -> None:
         view_install_done = SideloaderInstallDone(self.__pkg.name)
+        view_install_done.btn_logs.connect("clicked", self.__on_view_logs)
         self.bin_main.set_child(view_install_done)
 
     def __build_uninstall_ui(self) -> None:
@@ -114,3 +115,10 @@ class SideloaderWindow(Adw.ApplicationWindow):
 
     def __read_installed_package_info(self) -> None:
         raise NotImplementedError("Not implemented yet")
+
+    def __on_view_logs(self, *args):
+        self.view_install.btn_console.set_visible(False)
+        self.view_install.progress_bar.set_visible(False)
+        self.view_install.btn_quit.set_visible(True)
+        self.view_install.box_console_main.show()
+        self.bin_main.set_child(self.view_install)

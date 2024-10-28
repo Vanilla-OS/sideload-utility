@@ -109,6 +109,18 @@
                         </style>
                       </object>
                     </child>
+                    <child>
+                      <object class="GtkButton" id="btn_quit">
+                        <property name="action-name">app.quit</property>
+                        <property name="label" translatable="yes">Done</property>
+                        <property name="visible">False</property>
+                        <property name="halign">center</property>
+                        <style>
+                          <class name="pill"/>
+                          <class name="suggested-action"/>
+                        </style>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
