@@ -161,8 +161,7 @@ class SideloaderInstall(Adw.Bin):
     def on_vte_child_exited(
         self, console: Vte.Terminal, status: int, *args: Any
     ) -> None:
-        if not bool(status):
-            self.emit("done", True)
+        self.emit("done", bool(status))
 
     def __on_console_clicked(self, btn: Gtk.Button) -> None:
         status: bool = not self.box_console_main.get_visible()
