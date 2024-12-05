@@ -2,7 +2,6 @@
 <gresources>
   <gresource prefix="/org/vanillaos/Sideload">
     <file preprocess="xml-stripblanks">gtk/window.ui</file>
-    <file preprocess="xml-stripblanks">gtk/view-fail.ui</file>
     <file preprocess="xml-stripblanks">gtk/view-install-done.ui</file>
     <file preprocess="xml-stripblanks">gtk/view-install.ui</file>
     <file preprocess="xml-stripblanks">gtk/view-loading.ui</file>

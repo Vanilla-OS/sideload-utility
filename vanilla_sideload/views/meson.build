@@ -3,7 +3,6 @@ viewsdir = join_paths(pkgdatadir, 'vanilla_sideload/views')
 
 sources = [
   '__init__.py',
-  'fail.py',
   'install_done.py',
   'install.py',
   'loading.py',

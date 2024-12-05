@@ -28,8 +28,8 @@ from vanilla_sideload.backend.types import ValidSideloadAction, DebPackage
 class SideloaderInstall(Adw.Bin):
     # TODO: this and the uninstall view could be merged into one view
     __gtype_name__: Text = "SideloaderInstall"
-    __gsignals__: Dict[Text, Tuple[GObject.SignalFlags, Any, Tuple[bool]]] = {
-        "done": (GObject.SignalFlags.RUN_FIRST, None, (bool,))
+    __gsignals__: Dict[Text, Tuple[GObject.SignalFlags, Any, Tuple[int]]] = {
+        "done": (GObject.SignalFlags.RUN_FIRST, None, (int,))
     }
 
     stack_main: Adw.ViewStack = Gtk.Template.Child()
@@ -161,8 +161,7 @@ class SideloaderInstall(Adw.Bin):
     def on_vte_child_exited(
         self, console: Vte.Terminal, status: int, *args: Any
     ) -> None:
-        if not bool(status):
-            self.emit("done", True)
+        self.emit("done", status)
 
     def __on_console_clicked(self, btn: Gtk.Button) -> None:
         status: bool = not self.box_console_main.get_visible()
