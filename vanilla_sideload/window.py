@@ -98,7 +98,7 @@ class SideloaderWindow(Adw.ApplicationWindow):
         if not success:
             view_install_done.status.set_title(_("Installation Failed"))
             view_install_done.status.set_description(_("The package installation was unsuccessful"))
-            # view_install_done.set_icon(Gtk.Image.new_from_icon_name("dialog-error-symbolic", Gtk.IconSize.LARGE))
+            view_install_done.status.set_property("icon-name", "dialog-error-symbolic")
         self.bin_main.set_child(view_install_done)
 
     def __build_uninstall_ui(self) -> None:
