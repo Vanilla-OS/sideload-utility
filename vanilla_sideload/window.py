@@ -91,7 +91,7 @@ class SideloaderWindow(Adw.ApplicationWindow):
         self.bin_main.set_child(self.view_install)
 
     def __on_install_done(self, view_install: SideloaderInstall, *args: Any) -> None:
-        success = args[0]
+        success = not bool(args[0])
         view_install_done = SideloaderInstallDone(self.__pkg.name)
         view_install_done.btn_logs.connect("clicked", self.__on_view_logs)
         if not success:
