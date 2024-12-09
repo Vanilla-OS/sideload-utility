@@ -24,7 +24,6 @@ from typing import Text, Dict, Any, Callable, Optional
 from vanilla_sideload.backend.dpkg import DpkgResolver
 from vanilla_sideload.backend.android import AndroidResolver
 from vanilla_sideload.backend.types import ValidSideloadAction, DebPackage
-from vanilla_sideload.views.fail import SideloaderFail
 from vanilla_sideload.views.install_done import SideloaderInstallDone
 from vanilla_sideload.views.install import SideloaderInstall
 from vanilla_sideload.views.loading import SideloaderLoading
@@ -92,17 +91,18 @@ class SideloaderWindow(Adw.ApplicationWindow):
         self.bin_main.set_child(self.view_install)
 
     def __on_install_done(self, view_install: SideloaderInstall, *args: Any) -> None:
+        success = not bool(args[0])
         view_install_done = SideloaderInstallDone(self.__pkg.name)
         view_install_done.btn_logs.connect("clicked", self.__on_view_logs)
+        if not success:
+            view_install_done.status.set_title(_("Installation Failed"))
+            view_install_done.status.set_description(_("The package installation was unsuccessful"))
+            view_install_done.status.set_property("icon-name", "dialog-error-symbolic")
         self.bin_main.set_child(view_install_done)
 
     def __build_uninstall_ui(self) -> None:
         view_uninstall = SideloaderUninstall(self.__pkg)
         self.bin_main.set_child(view_uninstall)
-
-    def __build_error_ui(self, error_message: Text) -> None:
-        view_fail = SideloaderFail(error_message)
-        self.bin_main.set_child(view_fail)
 
     def __read_package_info(self) -> None:
         if self.__pkg_path.endswith(".apk"):
