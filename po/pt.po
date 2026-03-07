@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # ssantos <ssantos@web.de>, 2024.
-# Vinícius <vinicius.cgobbi2004@gmail.com>, 2024.
+# Vinícius <vinicius.cgobbi2004@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2024-07-13 17:21+0000\n"
+"PO-Revision-Date: 2025-07-04 10:01+0000\n"
 "Last-Translator: Vinícius <vinicius.cgobbi2004@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
@@ -33,7 +33,7 @@ msgstr "Ocorreu uma falha ao ler informações do pacote"
 
 #: vanilla_sideload/window.py:81
 msgid "Reading package information"
-msgstr "A ler informações do pacote"
+msgstr "Lendo informações do pacote"
 
 #: vanilla_sideload/window.py:82
 msgid "This may take a while..."
