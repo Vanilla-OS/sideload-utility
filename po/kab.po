@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vanilla-sideload package.
 # ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>, 2026.
+# Amadɣas <massiin@proton.me>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: vanilla-sideload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-29 21:44+0530\n"
-"PO-Revision-Date: 2026-02-10 13:09+0000\n"
-"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2026-02-11 19:09+0000\n"
+"Last-Translator: Amadɣas <massiin@proton.me>\n"
 "Language-Team: Kabyle <https://hosted.weblate.org/projects/vanilla-os/"
 "sideload-utility/kab/>\n"
 "Language: kab\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: data/org.vanillaos.Sideload.desktop.in:3
 msgid "Sideload"
-msgstr ""
+msgstr "Asali n yidis"
 
 #: data/org.vanillaos.Sideload.appdata.xml.in:7
 msgid "No description"
@@ -28,11 +29,11 @@ msgstr "Ulac aglam"
 
 #: vanilla_sideload/window.py:62 vanilla_sideload/window.py:68
 msgid "Failed reading package information"
-msgstr ""
+msgstr "Tecceḍ tɣuri n telɣut n ukemmus"
 
 #: vanilla_sideload/window.py:81
 msgid "Reading package information"
-msgstr ""
+msgstr "Taɣuri n telɣut n ukemmus"
 
 #: vanilla_sideload/window.py:82
 msgid "This may take a while..."
@@ -40,7 +41,7 @@ msgstr "Aya yezmer ad yeṭṭef kra n wakud…"
 
 #: vanilla_sideload/window.ui:5
 msgid "The application will be installed on the system."
-msgstr ""
+msgstr "Asnas ad yettwasbedd deg unagraw."
 
 #: vanilla_sideload/window.ui:13 vanilla_sideload/window.ui:44
 #: vanilla_sideload/gtk/view-install.ui:44
@@ -54,11 +55,11 @@ msgstr "Sbedd"
 
 #: vanilla_sideload/window.ui:36 vanilla_sideload/gtk/view-uninstall.ui:8
 msgid "The application will be removed from the system."
-msgstr ""
+msgstr "Asnas ad yettwakkes seg unagraw."
 
 #: vanilla_sideload/window.ui:54 vanilla_sideload/gtk/view-uninstall.ui:25
 msgid "Uninstall"
-msgstr ""
+msgstr "Kkes asbeddi"
 
 #: vanilla_sideload/window.ui:74 vanilla_sideload/window.ui:98
 #: vanilla_sideload/gtk/view-install-done.ui:17
@@ -95,7 +96,7 @@ msgstr "Asebded yemmed"
 
 #: vanilla_sideload/gtk/view-install-done.ui:9
 msgid "The package was successfully installed."
-msgstr ""
+msgstr "Akemmus yettwasbedd akken iwata."
 
 #: vanilla_sideload/gtk/view-install.ui:74
 msgid "Installing package"
@@ -107,8 +108,8 @@ msgstr "Aya yezmer ad yeṭṭef kra n wakud"
 
 #: vanilla_sideload/gtk/view-install.ui:105
 msgid "Show Output"
-msgstr ""
+msgstr "Sken tuffɣa"
 
 #: vanilla_sideload/gtk/view-loading.ui:7
 msgid "Loading"
-msgstr ""
+msgstr "Asali"
