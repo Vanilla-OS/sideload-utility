@@ -1,3 +1,10 @@
+vanilla-sideload-utility (1.0.3) unstable; urgency=medium
+
+  * Updated translations
+  * Fixed handling filenames with spaces
+
+ -- NN708 <nn708@outlook.com>  Sun, 17 May 2026 10:43:00 +0000
+
 vanilla-sideload-utility (1.0.1) unstable; urgency=medium
 
   * New translation updates
