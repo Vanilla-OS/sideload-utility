@@ -13,7 +13,7 @@ Build-Depends:
             make,
             libjpeg-dev
 Homepage: https://github.com/vanilla-os/vanilla-sideload-utility/
-Vcs-Browser: hhttps://github.com/vanilla-os/vanilla-sideload-utility
+Vcs-Browser: https://github.com/vanilla-os/vanilla-sideload-utility
 Vcs-Git: https://github.com/vanilla-os/vanilla-sideload-utility.git
 Rules-Requires-Root: no
 
