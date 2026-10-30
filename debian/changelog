@@ -1,3 +1,9 @@
+vanilla-sideload-utility (1.1.1) unstable; urgency=medium
+
+  * Fixed Chinese translations
+
+ -- Zixian Fang <fangcat_dev@outlook.com>  Fri, 30 Oct 2026 14:10:00 +0000
+
 vanilla-sideload-utility (1.1.0) unstable; urgency=medium
 
   * Updated install command for VSO v3
